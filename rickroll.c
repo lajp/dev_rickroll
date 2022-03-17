@@ -62,6 +62,7 @@ static ssize_t device_read(struct file *filp,
         return -EFAULT;
     }
     *offset += len;
+    *offset %= sizeof(rickroll);
     return len;
 }
 
