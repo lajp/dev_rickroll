@@ -3,6 +3,7 @@
 #include <linux/module.h>
 #include <linux/fs.h>
 #include <asm/uaccess.h>
+#include <linux/uaccess.h>
 #include <linux/miscdevice.h>
 
 static int device_open(struct inode *, struct file *);
