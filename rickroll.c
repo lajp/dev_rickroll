@@ -28,7 +28,7 @@ static int __init rickroll_init(void) {
         return major;
     }
 
-    cls = class_create(THIS_MODULE, DEVICE_NAME);
+    cls = class_create(DEVICE_NAME);
     device_create(cls, NULL, MKDEV(major, 0), NULL, DEVICE_NAME);
     pr_info("Device created on /dev/%s\n", DEVICE_NAME);
     return 0;
